@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewDay">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:text">Monday</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/dp_10</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="LinearHumidity">
+        <item name="android:layout_width">@dimen/dp_50</item>
+        <item name="android:layout_height">@dimen/dp_23</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_margin">11dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">6</item>
+    </style>
+
+    <style name="TextViewHumidity">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_margin">@dimen/dp_10</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:text">40%</item>
+    </style>
+
+    <style name="ImageViewIconWeather">
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/sun</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="TextViewMinMax">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_margin">@dimen/dp_10</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:text">20/27</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="TextViewTimeHour">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:text">12</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ImageViewIconTimeHour">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:src">@drawable/sun</item>
+    </style>
+
+    <style name="TextViewCardViewInfo">
+        <item name="android:text">20/27</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">@dimen/dp_10</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="ImageInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_margin">@dimen/dp_10</item>
+    </style>
+
+    <style name="TextViewIndex">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+
+    </style>
+    <style name="ImageToday">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_margin">@dimen/dp_10</item>
+    </style>
+
+    <style name="TextViewCardViewToday">
+        <item name="android:text">20/27</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">@dimen/dp_10</item>
+        <item name="android:textSize">@dimen/sp_26</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dp_5"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/txt_no_internet"
+        android:layout_above="@id/btnTryAgain"
+        android:text="@string/no_internet"
+        android:gravity="center"
+        android:textSize="@dimen/sp_24"
+        android:textColor="#EE0A58"
+        android:padding="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btnTryAgain"
+        android:background="@drawable/custom_button_try_again"
+        android:textAllCaps="false"
+        android:textColor="#9C27B0"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:text="@string/try_again"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/sp_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
