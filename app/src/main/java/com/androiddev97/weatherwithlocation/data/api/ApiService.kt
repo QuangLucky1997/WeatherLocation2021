@@ -1,6 +1,6 @@
 package com.androiddev97.weatherwithlocation.data.api
 
-import com.androiddev97.weatherwithlocation.data.model.fiveday.ForecastWeatherResponse
+import com.androiddev97.weatherwithlocation.data.model.fiveday.WeatherRespone
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -9,7 +9,7 @@ interface ApiService {
     suspend fun getListFiveDay(
         @Query("q") city: String,
         @Query("appid") apiKey: String
-    ): ForecastWeatherResponse
+    ): WeatherRespone
 
 
 }

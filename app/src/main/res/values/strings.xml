@@ -16,4 +16,6 @@
 
     <string name="feel_like">It feels like:</string>
     <string name="hint_search">Search</string>
+    <string name="today">Today</string>
+    <string name="next_7_days"><![CDATA[Next 7 Days >]]></string>
 </resources>

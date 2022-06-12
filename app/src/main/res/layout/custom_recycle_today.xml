@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/custom_button_try_again"
+    android:elevation="@dimen/dp_10"
+    android:layout_margin="20dp"
+    android:layout_width="100dp"
+    android:layout_height="150dp">
+
+
+    <TextView
+        android:id="@+id/text_temperature"
+        android:text="20 do"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/img_weather"
+        android:src="@drawable/rainsun"
+        android:layout_centerInParent="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+    <TextView
+        android:id="@+id/text_Time"
+        android:text="11:00"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20"
+        android:layout_below="@+id/img_weather"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
