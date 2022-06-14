@@ -10,7 +10,7 @@ class DataWeatherViewModel(private val mainRepository: MainRepository):ViewModel
    fun getDataWeather(cityName:String,appId:String)= liveData(Dispatchers.IO){
        emit(Resource.loading(data = null))
        try {
-           emit(Resource.success(data = mainRepository.getDataWeather(cityName,appId)))
+           emit(Resource.success(data = mainRepository.getDataWeather(cityName, appId)))
        } catch (exception: Exception) {
            emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"))
        }

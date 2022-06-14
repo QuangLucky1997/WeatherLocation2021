@@ -1,10 +1,11 @@
 package com.androiddev97.weatherwithlocation.ui.main.view
 
-import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+
+
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.androiddev97.weatherwithlocation.R
 import com.androiddev97.weatherwithlocation.data.api.ApiHelper
@@ -81,11 +82,11 @@ class ScreenMainActivity : AppCompatActivity() {
     private fun setDataWeather(weatherData: WeatherRespone) {
         textToDay.text = String.valueOf(weatherData.list[0].dt)
         cityName_text.text = weatherData.city.name
-        dataTempToday.text = weatherData.list[0].weather[0].main
-        when (weatherData.list[0].weather[0].main) {
-            "Clouds" -> img_weather_today.setImageResource(R.drawable.overclouds)
-            "Rain" -> img_weather_today.setImageResource(R.drawable.lightrain)
-        }
+//        dataTempToday.text = weatherData.list[0].weather[0].main
+//        when (weatherData.list[0].weather[0].main) {
+//            "Clouds" -> img_weather_today.setImageResource(R.drawable.overclouds)
+//            "Rain" -> img_weather_today.setImageResource(R.drawable.lightrain)
+//        }
 //        txtCityName.text = weatherData.city.name
 //        txtCountry.text = weatherData.city.country
 //        val simpleDateFormat = SimpleDateFormat("HH:mm")

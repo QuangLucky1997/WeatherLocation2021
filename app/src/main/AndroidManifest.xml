@@ -18,9 +18,10 @@
         android:theme="@style/Theme.WeatherWithLocation"
         tools:targetApi="n">
         <activity
-            android:name=".NextFiveDayActivity"
+            android:name=".ui.main.view.NextFiveDayActivity"
             android:exported="false" />
         <activity
+            android:exported="true"
             android:name=".ui.main.view.ScreenMainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>

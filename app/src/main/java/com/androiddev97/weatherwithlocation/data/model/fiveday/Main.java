@@ -31,6 +31,6 @@ public Integer grndLevel;
 public Integer humidity;
 @SerializedName("temp_kf")
 @Expose
-public Integer tempKf;
+public Float tempKf;
 
 }

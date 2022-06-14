@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/WeatherLocation2021/app/src/main/res/layout/activity_next_five_day.xml" value="0.353125" />
+        <entry key="..\:/WeatherLocation2021/app/src/main/res/layout/activity_screen_main.xml" value="0.25" />
         <entry key="..\:/weatherUpdate2022/WeatherLocation2021/app/src/main/res/drawable/bg_weather.xml" value="0.138" />
         <entry key="..\:/weatherUpdate2022/WeatherLocation2021/app/src/main/res/drawable/custom.xml" value="0.138" />
         <entry key="..\:/weatherUpdate2022/WeatherLocation2021/app/src/main/res/drawable/custom_button_try_again.xml" value="0.138" />
