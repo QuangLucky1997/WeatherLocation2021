@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/text_temperature"
-        android:text="20 do"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp_5"
-        android:textStyle="bold"
+        android:text="20 do"
         android:textColor="@color/black"
         android:textSize="@dimen/sp_20"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/img_weather"

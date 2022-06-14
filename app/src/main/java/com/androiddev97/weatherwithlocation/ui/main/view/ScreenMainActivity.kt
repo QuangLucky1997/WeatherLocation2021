@@ -1,7 +1,7 @@
 package com.androiddev97.weatherwithlocation.ui.main.view
 
 
-
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -21,7 +21,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.lang.String
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class ScreenMainActivity : AppCompatActivity() {
@@ -69,7 +70,6 @@ class ScreenMainActivity : AppCompatActivity() {
                     }
                 }
                 Status.LOADING -> {
-                    progress_bar.visibility = View.GONE
                     Log.e("Loading", "${it.message}")
                 }
                 Status.ERROR -> {
@@ -79,27 +79,41 @@ class ScreenMainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setDataWeather(weatherData: WeatherRespone) {
-        textToDay.text = String.valueOf(weatherData.list[0].dt)
+        val dataToday = weatherData.list[0].dt
+        val s = dataToday.toString()
+        val convertToday = s.toLong()
+        val transformedDate1 =
+            SimpleDateFormat(" EEE dd MMM yyyy", Locale.ENGLISH).format(Date(convertToday * 1000))
+        textToDay.text = transformedDate1
         cityName_text.text = weatherData.city.name
-//        dataTempToday.text = weatherData.list[0].weather[0].main
-//        when (weatherData.list[0].weather[0].main) {
-//            "Clouds" -> img_weather_today.setImageResource(R.drawable.overclouds)
-//            "Rain" -> img_weather_today.setImageResource(R.drawable.lightrain)
-//        }
-//        txtCityName.text = weatherData.city.name
-//        txtCountry.text = weatherData.city.country
-//        val simpleDateFormat = SimpleDateFormat("HH:mm")
-//        val sunRise = simpleDateFormat.format(weatherData.city.sunrise)
-//        text_view_sun_rise.text = sunRise
-//        val sunSet = simpleDateFormat.format(weatherData.city.sunset)
-//        text_view_sun_set.text = sunSet
-//        val dayFirst: String = valueOf(weatherData.list[0].dt)
-//        val l = Long.valueOf(dayFirst)
-//        val date = Date(l * 1000L)
-//        val simpleDateFormatDay = SimpleDateFormat("EEEE,d MMM", Locale.ENGLISH)
-//        val day = simpleDateFormatDay.format(date)
-//        txtDay.text = day
+        textStatusToday.text = weatherData.list[0].weather[0].main
+        when (weatherData.list[0].weather[0].main) {
+            "Clouds" -> img_weather_today.setImageResource(R.drawable.overclouds)
+            "Rain" -> img_weather_today.setImageResource(R.drawable.lightrain)
+        }
+        val tempToday = weatherData.list[0].main.feelsLike - 273.15
+        val dataTimeToday = tempToday.toInt()
+        dataTempToday.text = "$dataTimeToday°c"
+        dataWind.text = weatherData.list[0].wind.speed.toString() + "km/h"
+        dataHumidity.text = weatherData.list[0].main.humidity.toString() + "%"
+
+
+        val sunset = weatherData.city.sunset
+        val sunsetDT = sunset.toString()
+        val convertSunset = sunsetDT.toLong()
+        val sunsetData =
+            SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Date(convertSunset * 1000))
+        dataSunset.text = sunsetData
+
+
+        val sunrise = weatherData.city.sunrise
+        val sunriseDT = sunrise.toString()
+        val convertSunrise = sunriseDT.toLong()
+        val sunriseData =
+            SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Date(convertSunrise * 1000))
+        dataSunrise.text = sunriseData
 //        val seaLevel = weatherData.list[0].main.seaLevel
 //        val humidity = weatherData.list[0].main.humidity
 //        val wind = weatherData.list[0].wind.speed
@@ -114,7 +128,7 @@ class ScreenMainActivity : AppCompatActivity() {
 //        val day1 = simpleDateFormatDayNext1.format(dateNext1)
 //        text_day_1.text = day1
 //
-//        val dayNext2: String = valueOf(weatherData.list[14].dt)
+
 //        val lNext2 = Long.valueOf(dayNext2)
 //        val dateNext2 = Date(lNext2 * 1000L)
 //        val simpleDateFormatDayNext2 = SimpleDateFormat("EEEE", Locale.ENGLISH)
@@ -250,5 +264,6 @@ class ScreenMainActivity : AppCompatActivity() {
 
 
     }
+
 
 }

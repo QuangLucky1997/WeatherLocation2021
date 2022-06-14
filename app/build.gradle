@@ -13,6 +13,7 @@ android {
         applicationId "com.androiddev97.weatherwithlocation"
         minSdkVersion 19
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
 
